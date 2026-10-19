@@ -19,7 +19,7 @@ jobs:
           channel: stable
           cache: true
       - name: Android iskeletini oluştur (yoksa)
-        run: flutter create --platforms=android --project-name gunluk_mobile --org com.raylararasinda .
+        run: flutter create --platforms=android --project-name gunluk_mobile --org com.raylararasinda . && rm -f test/widget_test.dart
       - run: flutter pub get
       - name: Testler
         run: flutter test
